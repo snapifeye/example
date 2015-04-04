@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 
 		<style>
-		html, body { margin: 0px; padding: 0px;font-family: Helvetica;min-height:4000px;overflow:visible !important; }
+		html, body { margin: 0px 0px 0px 0px; padding: 0px;font-family: Helvetica;min-height:500px !important;overflow:visible !important; }
 
 			.sn-widget-gallery--info--event-name{
 				position: absolute;
@@ -40,7 +40,8 @@
 }
 
 			.sn-widget-gallery--image{
-				position: fixed !important;
+				position: relative !important;
+				background:transparent !important;
   			Height:auto;
 				width:100%;
 				max-width: 500px!important;
@@ -51,14 +52,15 @@
 
 			.sn-widget-gallery--info-container {
 				display: none !important;
-				position: fixed !important;
+				position: relative !important;
 				top: 0px !important;
 				left:0px !important;
 				font-family: Helvetica;
 			}
 
 			.sn-widget-gallery--image-container{
-				position: fixed !important;
+				position: relative !important;
+				background:transparent !important;
   			top: 0px !important;
   			bottom: 0px !important;
   			right: 0px !important;
@@ -69,8 +71,10 @@
 			}
 
 				.sn-widget-wrapper{
-				 background:#000 !important;
+				 background:transparent !important;
 				 height:auto !important;
+				 left:300px;
+				 align:center;
 
 			}
 
@@ -130,8 +134,9 @@
 			}
 
 			.sidebar {
-			   position: fixed;
-				 padding:15px 25px 25px 150px;
+			   position: absolute;
+				 padding:75px 25px 25px 150px;
+				 background-color:#00085a;
 
 	}
 
@@ -200,7 +205,7 @@
 					display:block !important;
 					position:inline;
 					width:90% !important;
-					padding:100px 0px 0px 0px;
+					padding:50px 0px 0px 0px;
 					left:0% !important;
 					right:0% !important;
 					margin:auto !important;
@@ -208,21 +213,82 @@
 				}
 
 				.sidebar{
-					display:block !important;
-					position:inline;
-					width:90% !important;
-					padding:575px 0px 0px 0px;
-					left:0% !important;
-					right:0% !important;
-					margin:auto !important;
-					overflow:visible !important;
-					min-height:500px;
+					top:700px;
+					padding: 0px 12%;
+					width:75%;
+					height:75%;
+					align:center;
+					margin:auto;
+
+
 
 				}
 				.header{
 					padding:450px 0px 0px 0px;
 
 				}
+				.sn-widget-wrapper{
+				 left:0px;
+				}
+
+				.myslider{
+					align:center;
+
+					}
+
+				.instaslider-wrapper{
+					align:center;
+					}
+
+
+				}
+
+				@media (max-width: 659px){
+					.myslider{
+						align:center;
+						width: 400px;
+						height: 400px;
+
+
+
+						}
+
+					.instaslider-wrapper{
+						align:center;
+						width: 400px;
+						height: 400px;
+
+
+						}
+
+					 .instaslider-wrapper ul li img
+						 {width:400px;
+							height:400px}
+
+}
+
+				@media (max-width: 469px){
+					.myslider{
+						align:center;
+						width: 300px;
+						height: 300px;
+
+
+
+						}
+
+					.instaslider-wrapper{
+						align:center;
+						width: 300px;
+						height: 300px;
+
+
+						}
+
+					.instaslider-wrapper ul li img
+						{width:300px;
+							height:300px}
+
 				}
 
 
@@ -259,14 +325,14 @@
 
 		<div class="Heading">
 
-				 <h1> Use #WeAreMarquette to see your photo here!</h1>
+				 <h1> #WeAreMarquette to see your photo here!</h1>
 
 	  </div>
 
 
 
 
-<div-class="container">	<div class="col-md-6"><div class="sidebar"><div class="myslider"></div>
+<div class="col-md-6"><div class="sidebar"><div class="myslider"></div>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/instaslider.jquery.js"></script>
@@ -291,6 +357,7 @@
 		<center><snapifeye-widget class="50%" params="eventId: 107, period: 6000, custom: false">
 		</snapifeye-widget>
 	</div class="col-md-6">
+</div>
 
 	</body>
 </html>
