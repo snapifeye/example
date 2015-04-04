@@ -1,0 +1,226 @@
+<html>
+	<head>
+
+		<!-- Meta
+================================================== -->
+
+<!--Twitter Meta-->
+<meta name="twitter:card" content="photo" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:URL" content="http://events.snapifeye.com/Snapifeye/"/>
+<meta property="og:title" content="Snapifeye Display Widget"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://s3.amazonaws.com/picter-dev/combo_7ebd2fe2eed647518deba4ce1c222b38_some_name.jpeg"/>
+<meta property="og:description"        content="Social Media Management for Event Promotions! Bridge the Gap Between your Events and Social Media." />
+<meta property="article:author"        content="Snapifeye" />
+<meta property="article:publisher"     content="Snapifeye" />
+
+
+<!-- Meta / End -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<!-- Need this -->
+		<script type="text/javascript" src="http://events.snapifeye.com/snapifeye-widget/snapifeye-widget-all.min.js"></script>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<style>
+		html, body { margin: 0px; padding: 0px;background:#000000 !important;font-family: Helvetica; }
+
+			.sn-widget-gallery--info--event-name{
+				position: absolute;
+  			color: #ffffff;
+			  width: 100%;
+			  top: 10px !important;
+			  height: 20px !important;
+			  margin-top: 10px !important;
+			  font-size: 30px !important;
+			  line-height: 32px !important;
+			  text-align: center;
+}
+
+			.sn-widget-gallery--image{
+				position: fixed !important;
+  			Height:auto;
+				width:100%;
+				max-width: 500px!important;
+			  max-height: 500px!important;
+
+}
+
+			.sn-widget-gallery--info-container {
+				display: none !important;
+				position: fixed !important;
+				top: 0px !important;
+				left:0px !important;
+				font-family: Helvetica;
+			}
+
+			.sn-widget-gallery--image-container{
+				position: fixed !important;
+  			top: 0px !important;
+  			bottom: 0px !important;
+  			right: 0px !important;
+  			left: 0% !important;
+				padding:25px;
+
+
+			}
+
+				.sn-widget-wrapper{
+				 background:#000 !important;
+				 height:auto !important;
+
+			}
+
+			.dummy {
+				margin-top: 100%;
+			}
+
+			.smarty {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.data-wrapper {
+				position: absolute;
+				width: 100%;
+				height: auto;
+
+			}
+
+
+			.photo-meta-first-name,
+			.photo-meta-last-name {
+				font-style: italic;
+				font-family: Helvetica;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				padding: 100px 25px;
+
+				color: #ffffff;
+				font-weight: 600;
+				font-size: 33px;
+				line-height: 35px;
+
+			}
+			.photo-question {
+				font-style: italic;
+				font-family: Helvetica;
+
+				color: #000;
+				font-weight: 100;
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			.event-hash-tag {
+				position: absolute;
+				bottom: 200px;
+				right: 50px;
+
+				color: #000;
+				font-size: 36px;
+				line-height: 43px;
+				font-family: Helvetica;
+			}
+
+			.sidebar {
+			   position: relative;
+				 padding:25px 700px 25px 25px;
+
+	}
+
+				.tickets {
+					width: 45px;
+					height: 250px;
+					position: fixed;
+					left: 20%;
+					top: 60%;
+				}
+
+			a.MyButton {
+				display:block;
+				box-shadow: 6px 6px 8px #2d2d2d;
+				font-size: 32px;
+				color: white;
+				text-align:center;
+				line-height:71px;
+				width:auto;
+				max-width:500px;
+				height:71px;
+				border-radius:3px;
+				align:center;
+				background:#f2653b;
+				font-family: Helvetica;
+			}
+
+
+
+			.instaslider-nav .prev{
+				display:none;
+
+			}
+
+			.instaslider-nav .next{
+				display:none;
+			}
+</style>
+
+		<script type="text/javascript">
+
+			function resolveFirstName(data) {
+				console.log("data", data);
+
+				var photo = data.photo
+				var fullName = (photo.meta || {}).name;
+				if (fullName) {
+					fullName = fullName.split(" ")[1];
+				}
+				return fullName;
+			}
+
+			function resolveEventName(data) {
+				return data.event.name;
+			}
+
+			function resolveQuestion(data) {
+				console.log("data", data);
+
+
+				return data.photo.caption;
+			}
+
+		</script>
+
+	</head>
+	<body style="background:#00000 !important;">
+
+
+	<div class="sidebar"><div class="myslider"></div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/instaslider.jquery.js"></script>
+	<script>
+
+		$('.myslider').instaSlider({
+			clientID: 'a164a0f6607c4aca9e0e4dff13937277',
+			access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
+			search: 'WeAreMarquette',
+			auto: true,
+			limit:1000,
+			Delay: 10000,
+		});
+
+	</script></div>
+
+
+		<center><snapifeye-widget class="50%" params="eventId: 107, period: 6000, custom: false">
+		</snapifeye-widget>
+
+
+	</body>
+</html>

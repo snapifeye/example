@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>InstaSlider jQuery Plugin</title>
+	<link rel="stylesheet" href="css/style.css" />
+
+	<style>
+	.instaslider-nav .prev{
+		display:none;
+
+	}
+
+	.instaslider-nav .next{
+		display:none;
+	}
+</style>
+
+
+</head>
+<body>
+
+	<div class="myslider"></div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/instaslider.jquery.js"></script>
+	<script>
+
+		$('.myslider').instaSlider({
+			clientID: 'a164a0f6607c4aca9e0e4dff13937277',
+			access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
+			search: 'code',
+			auto: true,
+			limit:100,
+		});
+
+	</script>
+
+</body>
+</html>
