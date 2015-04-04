@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 
 		<style>
-		html, body { margin: 0px; padding: 0px;background:#000000 !important;font-family: Helvetica; }
+		html, body { margin: 0px; padding: 0px;font-family: Helvetica;min-height:4000px;overflow:visible !important; }
 
 			.sn-widget-gallery--info--event-name{
 				position: absolute;
@@ -45,7 +45,7 @@
 				width:100%;
 				max-width: 500px!important;
 			  max-height: 500px!important;
-				padding: 50px 0px 0px 0px;
+				padding: 50px 0px 0px 25px;
 
 }
 
@@ -178,6 +178,54 @@
 				text-align:center;
 				padding-top: 25px;
 			}
+
+			@media (max-width: 1299px){
+
+				.hidder{
+				display:none;
+			}
+
+				.sn-widget-gallery--image-container{
+					display:block !important;
+					position:inline;
+					width:90% !important;
+					padding:10px 0px 0px 0px;
+					left:0% !important;
+					right:0% !important;
+					margin:auto !important;
+
+				}
+
+				.sn-widget-gallery--image{
+					display:block !important;
+					position:inline;
+					width:90% !important;
+					padding:100px 0px 0px 0px;
+					left:0% !important;
+					right:0% !important;
+					margin:auto !important;
+
+				}
+
+				.sidebar{
+					display:block !important;
+					position:inline;
+					width:90% !important;
+					padding:575px 0px 0px 0px;
+					left:0% !important;
+					right:0% !important;
+					margin:auto !important;
+					overflow:visible !important;
+					min-height:500px;
+
+				}
+				.header{
+					padding:450px 0px 0px 0px;
+
+				}
+				}
+
+
 </style>
 
 		<script type="text/javascript">
@@ -218,7 +266,7 @@
 
 
 
-	<div class="sidebar"><div class="myslider"></div>
+<div-class="container">	<div class="col-md-6"><div class="sidebar"><div class="myslider"></div>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/instaslider.jquery.js"></script>
@@ -229,16 +277,20 @@
 			access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
 			search: 'WeAreMarquette',
 			auto: true,
-			limit:1000,
+			limit:20,
 			Delay: 10000,
 		});
 
-	</script></div>
 
+	</script>
+
+	</div></div class="col-md-6">
+
+	<div class="col-md-6">
 
 		<center><snapifeye-widget class="50%" params="eventId: 107, period: 6000, custom: false">
 		</snapifeye-widget>
-
+	</div class="col-md-6">
 
 	</body>
 </html>
