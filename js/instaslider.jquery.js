@@ -54,6 +54,7 @@
         this.init();
     }
 
+  
     Plugin.prototype = {
 
         init: function() {

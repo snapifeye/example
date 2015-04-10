@@ -354,15 +354,24 @@
 
 		</script>
 
+		<script>
+
+		 function autoRefresh()
+		{
+			window.location = window.location.href;
+		}
+
+		 setInterval('autoRefresh()', 60000); // this will reload page after every 5 secounds; Method I
+		</script>
+
 	</head>
-	<body style="background:#transparent !important;">
+	<body style="background:#6d6d6d !important;">
 
 		<div class="Heading">
 
-				 <h1> </h1>
+				 <h1> Use #DearMKE on Instagram to See Your Photos Here</h1>
 
 	  </div>
-
 
 
 
@@ -375,10 +384,10 @@
 		$('.myslider').instaSlider({
 			clientID: 'a164a0f6607c4aca9e0e4dff13937277',
 			access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
-			search: 'WeAreMarquette',
+			search: 'DearMKE',
 			auto: true,
-			limit:20,
-			Delay: 10000,
+			limit:30,
+			Delay: 0,
 		});
 
 
@@ -388,8 +397,7 @@
 
 	<div class="col-md-6">
 
-		<center><snapifeye-widget class="50%" params="eventId: 107, period: 6000, custom: false">
-		</snapifeye-widget>
+
 	</div class="col-md-6">
 </div>
 
