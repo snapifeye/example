@@ -10,8 +10,8 @@
 <meta property="og:URL" content="http://events.snapifeye.com/Snapifeye/"/>
 <meta property="og:title" content="Snapifeye Display Widget"/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://s3.amazonaws.com/picter-dev/combo_7ebd2fe2eed647518deba4ce1c222b38_some_name.jpeg"/>
-<meta property="og:description"        content="Social Media Management for Event Promotions! Bridge the Gap Between your Events and Social Media." />
+<meta property="og:image" content="http://i0.wp.com/www.snapifeye.com/wp-content/uploads/2014/10/WebHero21.png?resize=1024%2C370"/>
+<meta property="og:description"        content="Social Media Management for Onsite Event Promotions! Bridge the Gap Between your Events and Social Media." />
 <meta property="article:author"        content="Snapifeye" />
 <meta property="article:publisher"     content="Snapifeye" />
 
@@ -19,151 +19,19 @@
 <!-- Meta / End -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-		<!-- Need this -->
-		<script type="text/javascript" src="http://events.snapifeye.com/snapifeye-widget/snapifeye-widget-all.min.js"></script>
 
 		<link rel="stylesheet" href="css/style.css" />
 
 		<style>
-		html, body { background-image:url("https://raw.githubusercontent.com/snapifeye/example/gh-pages/DearMKEBKG.jpg");!important;font-family: Helvetica; }
-
-			.sn-widget-gallery--info--event-name{
-				position: absolute;
-  			color: #ffffff;
-			  width: 100%;
-			  top: 10px !important;
-			  height: 20px !important;
-			  margin-top: 10px !important;
-			  font-size: 30px !important;
-			  line-height: 32px !important;
-			  text-align: center;
-}
-
-			.sn-widget-gallery--image{
-				position: relative !important;
-				background:transparent !important;
-  			Height:auto;
-				width:100%;
-				max-width: 500px!important;
-			  max-height: 500px!important;
-				padding: 50px 0px 0px 25px;
-
-}
-
-			.sn-widget-gallery--info-container {
-				display: none !important;
-				position: relative !important;
-				top: 0px !important;
-				left:0px !important;
-				font-family: Helvetica;
-			}
-
-			.sn-widget-gallery--image-container{
-				position: relative !important;
-				background:transparent !important;
-  			top: 0px !important;
-  			bottom: 0px !important;
-  			right: 0px !important;
-  			left: 0% !important;
-				padding:25px;
+		html,body {
+			background-image:url("https://raw.githubusercontent.com/snapifeye/example/gh-pages/DearMKEBKG.jpg");
+			font-family: Helvetica;
+			font-size: 40px;
+			text-align:center;
+			color:white;
 
 
 			}
-
-				.sn-widget-wrapper{
-				 background:transparent !important;
-				 height:auto !important;
-				 left:300px;
-				 align:center;
-
-			}
-
-			.dummy {
-				margin-top: 100%;
-			}
-
-			.smarty {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-			}
-
-			.data-wrapper {
-				position: absolute;
-				width: 100%;
-				height: auto;
-
-			}
-
-
-			.photo-meta-first-name,
-			.photo-meta-last-name {
-				font-style: italic;
-				font-family: Helvetica;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				padding: 100px 25px;
-
-				color: #ffffff;
-				font-weight: 600;
-				font-size: 33px;
-				line-height: 35px;
-
-			}
-			.photo-question {
-				font-style: italic;
-				font-family: Helvetica;
-
-				color: #000;
-				font-weight: 100;
-				font-size: 16px;
-				line-height: 18px;
-			}
-
-			.event-hash-tag {
-				position: absolute;
-				bottom: 200px;
-				right: 50px;
-
-				color: #000;
-				font-size: 36px;
-				line-height: 43px;
-				font-family: Helvetica;
-			}
-
-			.sidebar {
-			   position: absolute;
-				 padding:75px 25px 25px 150px;
-				 background-color:transparent;
-
-	}
-
-				.tickets {
-					width: 45px;
-					height: 250px;
-					position: fixed;
-					left: 20%;
-					top: 60%;
-				}
-
-			a.MyButton {
-				display:block;
-				box-shadow: 6px 6px 8px #2d2d2d;
-				font-size: 32px;
-				color: white;
-				text-align:center;
-				line-height:71px;
-				width:auto;
-				max-width:500px;
-				height:71px;
-				border-radius:3px;
-				align:center;
-				background:#f2653b;
-				font-family: Helvetica;
-			}
-
 
 
 			.instaslider-nav .prev{
@@ -175,153 +43,92 @@
 				display:none;
 			}
 
-			.heading{
-				color: #ffffff;
-				font-weight: 600;
-				font-size: 33px;
-				line-height: 35px;
-				text-align:center;
-				padding-top: 25px;
-			}
-
-			@media (max-width: 1299px){
-
-				.hidder{
-				display:none;
-			}
-
-				.sn-widget-gallery--image-container{
-					display:block !important;
-					position:inline;
-					width:90% !important;
-					padding:10px 0px 0px 0px;
-					left:0% !important;
-					right:0% !important;
-					margin:auto !important;
-
+			.myslider{
+				float:right;
+				padding:25px 15%;
 				}
 
-				.sn-widget-gallery--image{
-					display:block !important;
-					position:inline;
-					width:90% !important;
-					padding:50px 0px 0px 0px;
-					left:0% !important;
-					right:0% !important;
-					margin:auto !important;
+			.instaslider-wrapper{
+				float:right;
+					}
 
+			.instaslider-wrapper ul li img{
+				float:right;
 				}
 
-				.sidebar{
-					top:700px;
-					padding: 0px 12%;
-					width:75%;
-					height:75%;
-					align:center;
-					margin:auto;
+//RESPONSIVE STYLE//
 
-
-
-				}
-				.header{
-					padding:450px 0px 0px 0px;
-
-				}
-				.sn-widget-wrapper{
-				 left:0px;
-				}
-
+			@media (max-width: 999px){
 				.myslider{
-					align:center;
+					float:none !important;
+					padding:25px !important;
+					align:center !important
 
 					}
-
-				.instaslider-wrapper{
-					align:center;
-					}
-
-
-				}
 
 				@media (max-width: 659px){
 
-					.sidebar{
-						top:700px !important;
-						padding: 0px 12%;
-
-					}
 
 					.myslider{
-						align:center;
-						width: 400px;
-						height: 400px;
+						align:center !important;
+						width: 400px !important;
+						height: 400px !important;
 						}
 
 					.instaslider-wrapper{
-						align:center;
-						width: 399px;
-						height: 399px;
+						align:center !important;
+						width: 400px !important;
+						height: 400px !important;
 						}
 
-					 .instaslider-wrapper ul li img
-						 {width:399px;
-							height:399px}
-
+					 .instaslider-wrapper ul li img{
+					align:center !important;
+					width: 400px !important;
+					height: 400px !important;
+					}
 }
 
 				@media (max-width: 569px){
-					.sidebar{
-						top:6	50px !important;
-						padding: 0px 12% !important;
-				}
+
 					.myslider{
-						align:center;
-						width: 349px;
-						height: 349px;
-						padding: 0px;
+						width: 349px !important;
+						height: 349px!important;
+						padding: 0px!important;
 
 						}
 
 					.instaslider-wrapper{
-						align:center;
-						width: 349px;
-						height: 349px;
-						padding: 0px;
+						width: 349px !important;
+						height: 349px!important;
+						padding: 0px!important;
 						}
 
-					.instaslider-wrapper ul li img
-						{width:349px;
-							height:349px;
-							padding: 0px !important;
+					.instaslider-wrapper ul li img{
+					width: 349px !important;
+					height: 349px!important;
+					padding: 0px!important;
 						}
 
 				}
 
 				@media (max-width: 479px){
-					.sidebar{
-						top:550px !important;
-						padding: 0px 12% !important;
-}
+
 					.myslider{
-						align:center;
-						width: 269px;
-						height: 269px;
-						padding: 0px;
+						width: 269px !important;
+						height: 269px!important;
+						padding: 0px !important;
 
 						}
 
 					.instaslider-wrapper{
-						align:center;
-						width: 269px;
-						height: 269px;
-						padding: 0px;
+						width: 269px !important;
+						height: 269px!important;
+						padding: 0px !important;
 						}
 
-					.instaslider-wrapper ul li img
-						{width:269px;
-							height:269px;
-							padding: 0px !important;
-						}
+					.instaslider-wrapper ul li img{
+
+						}}
 
 				}
 
@@ -365,21 +172,10 @@
 		</script>
 
 	</head>
-	<body style="">
+	<body>
 
-		<div class="Heading">
+<div class="row" style="padding: 50px 0px;"> Use #DearMKE on Instagram to See Your Photos Here</h1>
 
-				 <h1> Use #DearMKE on Instagram to See Your Photos Here</h1>
-
-	  </div>
-
-
-
-<div class="col-md-6"><div class="sidebar">
-
-	</div></div class="col-md-6">
-
-	<div class="col-md-6" style="padding:5% 0% 0% 30%;">
 
 		<div class="myslider"></div>
 
@@ -400,6 +196,7 @@
 			</script>
 	</div class="col-md-6">
 </div>
+</div class="row	">
 
 	</body>
 </html>

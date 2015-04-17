@@ -48,14 +48,14 @@ table {
 }
 
 body{
-	margin:50px auto;
+	margin:0px auto;
 }
 
 /*----------------------------------------------------------------
 	InstaSlider Styles
 ----------------------------------------------------------------*/
 
-.myslider{width:500px;height:500px;border:1px solid gray;margin:0 auto;overflow:visible}
+.myslider{width:500px;height:500px;border:0px solid gray;margin:0 auto;overflow:visible}
 .instaslider-wrapper{width:500px;height:500px;background:#e7e7e7;overflow:hidden}
 .instaslider-wrapper ul{width:10000px;list-style:none}
 .instaslider-wrapper ul li{float:left}
