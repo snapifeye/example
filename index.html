@@ -20,17 +20,26 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 
 		<link rel="stylesheet" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Ruda:400,700' rel='stylesheet' type='text/css'>
 
 		<style>
 		html,body {
 			background:#6d6d6d;
-			font-family: Helvetica;
+			font-family: 'Ruda', sans-serif;
+			font-size: 40px;
 			font-size: 40px;
 			float:left;
 			color:white;
-			padding:25px;
 			line-height:45px;
 			}
 
@@ -46,8 +55,8 @@
 
 			.myslider{
 				position:absolute;
-				right:70px;
-				top:110px
+				right:75px;
+				top:50px;
 				}
 
 			.instaslider-wrapper{
@@ -58,6 +67,49 @@
 				float:right;
 				}
 
+				#rokkin{
+					background-color: #989898;
+					height: 100vh;
+					width: 100vw;
+					padding: 0;
+					margin: 0;
+					overflow: hidden;
+					position: fixed;
+					z-index: 1;
+					top: 0;
+					left: 0;
+				}
+
+				.content{
+					background-color: #6d6d6d;
+					z-index:2;
+					width: 100vw;
+					min-height: 100vh;
+					position: relative;
+					margin: 0;
+					margin-top: 100vh;
+					padding: 0;
+				}
+
+				#image{
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 100px;
+				}
+
+				h1 {
+					position: absolute;
+					top: 25px;
+				}
+
+				p{
+					position: absolute;
+					top: 150px;
+					left:15px;
+				}
+
+				
 //RESPONSIVE STYLE//
 
 			@media (max-width: 999px){
@@ -127,6 +179,8 @@
 
 
 </style>
+		
+
 		<script>
 
 		 function autoRefresh()
@@ -140,16 +194,25 @@
 	</head>
 	<body>
 
-<div class="row" style="padding: 50px 0px;"> Use #HackMKE on Instagram <br>to See Your Photos Here</h1></row>
-<div class="row" style="padding: 50px 0px;align:left !important;"> Find us on social <br>@rokkincat <br> @TheCommonsWI<br><br>Wifi Name: RokkinCatGuest<br>Wifi Password:makingstuff<br> talk.rokkincat.com<br>RokkinCat on IRC
+	<div data-stellar-background-ratio="0.5" id="rokkin">
+		<img id="image" src="img/rokkincat.png" />
+	</div>
+
+<div class="content">
+
+<div class="col-md-12">
+<h1>Use <FONT COLOR="ff0000">#HackMKE</FONT> on Instagram <br>to See Your Photos Here</h1></row>
+<div class="row" style="padding: 50px 0px;align:left !important;"><p> Find us on social <br><a href="http://www.twitter.com/rokkincat"><FONT COLOR="989898">@rokkincat</a> </FONT><br> @TheCommonsWI<br><br>Wifi Name: RokkinCatGuest<br>Wifi Password:makingstuff<br> talk.rokkincat.com<br>RokkinCat on IRC</p>
+<div class="myslider"></div>
+</div>
+
 
 
 
 </h1></row>
 
 
-		<div class="myslider"></div>
-
+		<div class="col-md-6">
 			<script src="js/jquery.js"></script>
 			<script src="js/instaslider.jquery.js"></script>
 			<script>
@@ -159,15 +222,26 @@
 					access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
 					search: 'HackMKE',
 					auto: true,
-					limit:10,
+					limit:8,
 					Delay: 0,
 				});
 
 
 			</script>
-	</div class="col-md-6">
+			</div class="col-md-6">
 </div>
-</div class="row	">
+</div>
+
+
+
+<script src="js/jquery.stellar.min.js">
+</script>
+<script type="text/javascript">
+	$.stellar();
+
+
+
+</script>
 
 	</body>
 </html>
