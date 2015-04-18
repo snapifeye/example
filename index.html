@@ -18,6 +18,7 @@
 
 <!-- Meta / End -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 
 
 		<link rel="stylesheet" href="css/style.css" />
@@ -31,9 +32,6 @@
 			color:white;
 			padding:25px;
 			line-height:45px;
-
-
-
 			}
 
 
@@ -64,9 +62,8 @@
 
 			@media (max-width: 999px){
 				.myslider{
-					float:none !important;
-					padding:25px !important;
-					align:center !important
+					width:300px;
+					height:auto;
 
 					}
 
@@ -74,43 +71,37 @@
 
 
 					.myslider{
-						align:center !important;
-						width: 400px !important;
-						height: 400px !important;
+						width:300px;
+						height:auto;
 						}
 
 					.instaslider-wrapper{
-						align:center !important;
-						width: 400px !important;
-						height: 400px !important;
+						width:300px;
+						height:auto;
 						}
 
 					 .instaslider-wrapper ul li img{
-					align:center !important;
-					width: 400px !important;
-					height: 400px !important;
+						width:300px;
+						height:auto;
 					}
 }
 
 				@media (max-width: 569px){
 
 					.myslider{
-						width: 349px !important;
-						height: 349px!important;
-						padding: 0px!important;
+						width:250px;
+						height:auto;
 
 						}
 
 					.instaslider-wrapper{
-						width: 349px !important;
-						height: 349px!important;
-						padding: 0px!important;
+						width:250px;
+						height:auto;
 						}
 
 					.instaslider-wrapper ul li img{
-					width: 349px !important;
-					height: 349px!important;
-					padding: 0px!important;
+						width:250px;
+						height:auto;
 						}
 
 				}
@@ -118,16 +109,14 @@
 				@media (max-width: 479px){
 
 					.myslider{
-						width: 269px !important;
-						height: 269px!important;
-						padding: 0px !important;
+						width:200px !important;
+						height:auto;
 
 						}
 
 					.instaslider-wrapper{
-						width: 269px !important;
-						height: 269px!important;
-						padding: 0px !important;
+						width:200px;
+						height:auto;
 						}
 
 					.instaslider-wrapper ul li img{
@@ -138,33 +127,6 @@
 
 
 </style>
-
-		<script type="text/javascript">
-
-			function resolveFirstName(data) {
-				console.log("data", data);
-
-				var photo = data.photo
-				var fullName = (photo.meta || {}).name;
-				if (fullName) {
-					fullName = fullName.split(" ")[1];
-				}
-				return fullName;
-			}
-
-			function resolveEventName(data) {
-				return data.event.name;
-			}
-
-			function resolveQuestion(data) {
-				console.log("data", data);
-
-
-				return data.photo.caption;
-			}
-
-		</script>
-
 		<script>
 
 		 function autoRefresh()
@@ -172,7 +134,7 @@
 			window.location = window.location.href;
 		}
 
-		 setInterval('autoRefresh()', 120000); // this will reload page after every 5 secounds; Method I
+		 setInterval('autoRefresh()', 60000); // this will reload page after every 2 minutes;
 		</script>
 
 	</head>
@@ -197,7 +159,7 @@
 					access_token: '721386715.a164a0f.a42f9e7d19904a9db685ac18bf29cdcb',
 					search: 'HackMKE',
 					auto: true,
-					limit:100,
+					limit:10,
 					Delay: 0,
 				});
 

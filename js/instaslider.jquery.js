@@ -54,7 +54,8 @@
         this.init();
     }
 
-  
+
+
     Plugin.prototype = {
 
         init: function() {
@@ -66,6 +67,7 @@
             self.imgWidth = self.$container.width(), // img width will be the same as the container
             self.endpoint = 'https://api.instagram.com/v1/tags/' + this.options.search + '/media/recent?client_id=' + this.options.clientID;
             self.username = '';
+
 
             self.createSlider(); // Create the slider
 
@@ -127,6 +129,15 @@
                 sliderUL = container.find('.instaslider-wrapper ul');
 
             self.fetch().done(function (results) {
+
+                console.log(results);
+
+                for (var i=0;i<results.data.length;i++){
+                  var current = results.data[i];
+                  var ref = new Firebase("https://examplehack.firebaseio.com/"+current.id+"/data");
+                  ref.set(current);
+                }
+
                 // Limit the amount of results
                 results = self.limit(results.data, self.options.limit);
                 // loop over results create a slider for each one.
@@ -179,7 +190,11 @@
 
             this.endpoint = 'https://api.instagram.com/v1/users/search?q='+ self.options.search + '&access_token=' + self.options.access_token;
 
+            console.log("ENDPOINT", endpoint);
+
             this.fetch().done(function(data){
+
+              console.log("DATA", data);
 
                 var userid = data.data[0].id;
                 self.endpoint = 'https://api.instagram.com/v1/users/' + userid + '/media/recent?access_token=' + self.options.access_token;
